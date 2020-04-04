@@ -19,16 +19,18 @@ const ProductSlider = ({ title, products }) => {
   // Change in order to display more or less products per slide
   const [visibleSlides, setVisibleSlides] = useState(2)
   // Stores current width of window, for being able to dynamically change the dom based on window size
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = useState(0)
 
   // Runs on inital load. Works similar to ComponentDidMount/Update in React classes
   useEffect(() => {
     const listener = () => {
       setWindowWidth(window.innerWidth)
     }
-    window.addEventListener('resize', listener)
-    return () => {
-      window.removeEventListener('resize', listener)
+    if (window) {
+      window.addEventListener('resize', listener)
+      return () => {
+        window.removeEventListener('resize', listener)
+      }
     }
   }, [])
 
