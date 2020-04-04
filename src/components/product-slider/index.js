@@ -17,7 +17,7 @@ import RightArrow from '../../images/arrow-right.png'
  */
 const ProductSlider = ({ title, products }) => {
   // Change in order to display more or less products per slide
-  const [visibleSlides, setVisibleSlides] = useState(2)
+  const [visibleSlides, setVisibleSlides] = useState(4)
   // Stores current width of window, for being able to dynamically change the dom based on window size
   const [windowWidth, setWindowWidth] = useState(0)
 
@@ -26,7 +26,8 @@ const ProductSlider = ({ title, products }) => {
     const listener = () => {
       setWindowWidth(window.innerWidth)
     }
-    if (window) {
+    if (typeof window !== 'undefined') {
+      listener()
       window.addEventListener('resize', listener)
       return () => {
         window.removeEventListener('resize', listener)
