@@ -22,26 +22,14 @@ import '../../styles/global.scss'
  *
  * @param {JSX.Element} children children html node to be wrapped in layout
  */
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  return (
-    <>
-      <Banner text="FREE SHIPPING ON ALL ORDERS OVER $75" />
-      <Header />
-      <main className="main">{children}</main>
-      <Footer />
-    </>
-  )
-}
+const Layout = ({ children }) => (
+  <>
+    <Banner text="FREE SHIPPING ON ALL ORDERS OVER $75" />
+    <Header />
+    <main className="main">{children}</main>
+    <Footer />
+  </>
+)
 
 Layout.propTypes = {
   children: PropTypes.node,

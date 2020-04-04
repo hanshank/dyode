@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `DYODE interview challenge`,
     description: `A static site I made for DYODE as a part of their interview proces`,
+    author: `Hans Martin Hanken`,
   },
   plugins: [
     {
