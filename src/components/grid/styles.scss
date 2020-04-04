@@ -1,0 +1,11 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+  gap: $site-gutter;
+}
+
+.twelve-col-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: $site-gutter;
+}

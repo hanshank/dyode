@@ -1,0 +1,81 @@
+@import '../../styles/mixins.scss';
+
+.newsletter-cta-container {
+  background-color: $green;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.icon {
+  margin-top: 13px;
+}
+
+.newsletter-cta-content {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include media-md {
+    flex-direction: row;
+  }
+}
+
+.newsletter-text {
+  margin-bottom: 25px;
+  margin-top: 0;
+  padding: 0 25px;
+  max-width: 680px;
+  text-align: center;
+
+  @include media-md { 
+    text-align: left;
+    max-width: unset;
+    padding: unset;
+    width: 50%;
+    margin-bottom: unset;
+  }
+}
+
+.newsletter-cta-form {
+  display: flex;
+  max-height: 45px;
+  width: 100%;
+
+  @include media-md {
+    padding: 0 50px;
+  }
+
+  @include media-md {
+    padding: unset;
+    width: 50%;
+    margin-left: 15px;
+  }
+}
+
+.newsletter-cta-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+
+  @include media-md {
+    flex-direction: row;
+  }
+}
+
+.newsletter-cta-form-field {
+  margin-right: 10px;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.form-field::placeholder {
+  font-family: $main-font;
+  color: #b7b7b7;
+}
+

@@ -1,0 +1,104 @@
+@import './mixins.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  
+  font-size: 14px;
+
+  @include media-sm {
+    font-size: 14px;
+  }
+
+  @include media-md {
+    font-size: 16px;
+  }
+
+  @include media-lg {
+    font-size: 18px;
+  } 
+}
+
+.heading-1 {
+  color: white;
+  font-family: $cursive-font;
+  font-size: 2.5rem;
+  margin-bottom: .3em;
+}
+
+.heading-2 {
+  color: white;
+  font-family: $main-font;
+  font-weight: 300;
+  font-size: 2.1rem;
+  margin-bottom: 1em;
+}
+
+.heading-3 {
+  font-family: $cursive-font;
+  font-size: 1.8rem;
+}
+
+.heading-4 {
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.heading-5 {
+  font-family: $main-font;
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+.body-text, .form-field {
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.body-text {
+  font-weight: 300;
+  // max-width: 475px;
+}
+
+.form-field {
+  border: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.--white {
+  color: white;
+}
+
+.container {
+  padding-left: $site-gutter;
+  padding-right: $site-gutter;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $content-max-width;
+
+  // @include media-md {
+  //   padding-left: 45px;
+  //   padding-right: 45px;
+  // }
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.page-section {
+  padding-top: $site-gutter;
+  padding-bottom: $site-gutter;
+
+  // @include media-md {
+  //   padding-top: 45px;
+  //   padding-bottom: 45px;
+  // }
+}

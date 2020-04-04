@@ -1,0 +1,70 @@
+@import '../../styles/mixins.scss';
+
+.image-banner {
+  position: relative;
+  background-size: cover;
+  height: 72vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  background-position-x: 75%;
+  padding: 0 2em;
+  padding-bottom: .5em;
+
+  @include media-md {
+    background-position-x: 50%;
+    padding: 0 4em;
+  }
+
+  @include media-lg {
+    padding: 0 6em;
+  }
+
+  @include media-xl {
+    background-position-x: unset;
+  }
+}
+
+.image-banner.right {
+  align-items: flex-end;
+}
+
+// .image-banner-content {
+//   padding: 0 70px;
+// }
+
+.slider-indicators {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 25px;
+}
+
+.slider-indicator {
+  position: relative;
+  background: rgba(255, 255, 255, 0.4);
+  width: 25px;
+  height: 25px;
+}
+
+.slider-indicator.active {
+  background: white;
+}
+
+.slider-indicator:not(:first-child) {
+  margin-left: 20px;
+}
+
+// .left-align-bg {
+//   background-position-x: 75%;
+
+//   @include media-lg {
+//     background-position: unset;
+//   }
+// }

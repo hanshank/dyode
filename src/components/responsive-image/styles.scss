@@ -1,0 +1,18 @@
+@import '../../styles/mixins.scss';
+
+.responsive-image-container {
+  width: 100%;
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+}
+
+.hide-on-mobile {
+  display: none;
+
+  @include media-lg {
+    display: block;
+  }
+}

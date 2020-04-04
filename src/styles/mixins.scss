@@ -1,0 +1,12 @@
+@mixin media-sm {
+  @media (min-width: $small) { @content; }
+}
+@mixin media-md {
+  @media (min-width: $medium) { @content; }
+}
+@mixin media-lg {
+  @media (min-width: $large) { @content; }
+}
+@mixin media-xl {
+  @media (min-width: $x-large) { @content; }
+}

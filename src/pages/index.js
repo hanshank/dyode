@@ -1,21 +1,61 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from 'react'
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+// Component imports
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import ImageBanner from '../components/image-banner'
+import CollectionRow from '../components/collection-row'
+import ProductSlider from '../components/product-slider'
+import NewsletterCTA from '../components/newsletter-cta'
+import SocialFeed from '../components/social-feed'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+// Images
+import HeroOneImg from '../images/hero-1-image.jpg'
+import HeroOneMobileImg from '../images/hero-1-image-mobile.jpg'
+import HeroTwoMobileImg from '../images/hero-2-image-mobile.jpg'
+import HeroTwoImg from '../images/hero-2-image.jpg'
+import ProductImage from '../images/product-image-1.jpg'
+
+const IndexPage = () => {
+  const products = [
+    { name: "Women's T-Shirt", title: 'Product Title', price: 19.99, image: ProductImage },
+    { name: "Women's T-Shirt", title: 'Product Title', price: 19.99, image: ProductImage },
+    { name: "Women's T-Shirt", title: 'Product Title', price: 19.99, image: ProductImage },
+    { name: "Women's T-Shirt", title: 'Product Title', price: 19.99, image: ProductImage },
+    { name: "Women's T-Shirt", title: 'Product Title', price: 19.99, image: ProductImage },
+    { name: "Women's T-Shirt", title: 'Product Title', price: 19.99, image: ProductImage },
+    { name: "Women's T-Shirt", title: 'Product Title', price: 19.99, image: ProductImage },
+    { name: "Women's T-Shirt", title: 'Product Title', price: 19.99, image: ProductImage },
+    { name: "Women's T-Shirt", title: 'Product Title', price: 19.99, image: ProductImage },
+    { name: "Women's T-Shirt", title: 'Product Title', price: 19.99, image: ProductImage },
+  ]
+
+  return (
+    <Layout>
+      <SEO title="Home" />
+      <ImageBanner buttonText="SHOP NOW" img={HeroOneImg} mobileImg={HeroOneMobileImg} slider />
+      <section className="page-section">
+        <CollectionRow />
+      </section>
+
+      <section className="page-section">
+        <ProductSlider products={products} title="New Arrivals" />
+      </section>
+
+      <ImageBanner
+        buttonText="SHOP NOW"
+        img={HeroTwoImg}
+        mobileImg={HeroTwoMobileImg}
+        altButton
+        rightPlacement
+        backgroundLeft
+      />
+      <section className="page-section">
+        <SocialFeed />
+      </section>
+      <NewsletterCTA />
+    </Layout>
+  )
+}
 
 export default IndexPage

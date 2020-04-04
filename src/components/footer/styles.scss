@@ -1,0 +1,113 @@
+@import '../../styles/mixins.scss';
+
+// ==================== FOOTER ROOT LVL ====================
+
+.footer {
+  background-color: black;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+
+  @include media-sm {
+    width: unset;
+    flex-direction: row;
+  }
+}
+
+.footer-section-title {
+  color: white;
+  font-family: $cursive-font;
+  font-size: 1.2rem;
+}
+
+// ==================== FOOTER MENUS ====================
+// ***** Footer menus hold the links to different pages *****
+
+.footer-menus {
+  display: flex;
+  flex-direction: column;
+
+  @include media-sm {
+    flex-direction: row;
+  }
+}
+
+.footer-menu-container {
+  width: 100%;
+  margin-bottom: 10px;
+  @include media-sm {
+    width: unset;
+  }
+}
+
+.footer-menu-container:not(:first-child) {
+  @include media-sm {
+    margin-left: 75px;
+  }
+}
+
+.footer-menu-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-menu {
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transition: all .5s ease;
+
+  @include media-sm {
+    opacity: 1;
+    height: unset;
+  }
+}
+
+.footer-menu.open {
+  opacity: 1;
+  height: unset;
+}
+
+.footer-menu-toggle-icon {
+  font-family: $main-font;
+  color: white;
+  font-size: 1.6rem;
+  background: none;
+  border: none;
+
+  @include media-sm {
+    display: none;
+  }
+}
+
+.footer-menu-item:not(:last-child) {
+  margin-bottom: .325em;
+}
+
+.footer-menu-link {
+  text-decoration: none;
+  color: #e8e8e8;
+  font-size: 1rem;
+  font-family: $main-font;
+  font-weight: 200;
+}
+
+// ==================== SOCIAL LINKS/ICONS ====================
+// ***** Links to different social medi platforms *****
+
+.social-icons {
+  margin-top: .325em;
+}
+
+.social-icon:not(:first-child) {
+  margin-left: 15px;
+}

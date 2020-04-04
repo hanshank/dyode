@@ -1,0 +1,22 @@
+@import '../../styles/mixins.scss';
+
+.mens-feature, .womens-feature {
+  grid-column: span 6;
+
+  @include media-md {
+    grid-column: span 4;
+  }
+}
+
+.accessories-feature { 
+  grid-column: span 12;
+  
+  @include media-md {
+    grid-column: span 4;
+  }
+}
+
+// .accessories-feature img { 
+//   object-fit: none;
+// }
+

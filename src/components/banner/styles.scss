@@ -1,0 +1,15 @@
+.banner {
+  background-color: black;
+  color: white;
+  font-family: $main-font;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.banner-title {
+  font-size: 1.25rem;
+}
