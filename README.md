@@ -1,5 +1,7 @@
 # DYODE Interview Challenge
 
+Live site: https://dyode-interview-challenge.netlify.com
+
 ## How to view in browser
 
 1. make sure to install gatsby-cli by running npm install -g gatsby-cli
