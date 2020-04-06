@@ -3,23 +3,26 @@
 .image-banner {
   position: relative;
   background-size: cover;
-  height: 72vh;
+  height: 33vh;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  background-position-x: 75%;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
   padding: 0 2em;
   padding-bottom: .5em;
 
   @include media-md {
     background-position-x: 50%;
     padding: 0 4em;
+    height: 50vh;
   }
 
   @include media-lg {
-    padding: 0 6em;
+    padding: 0 4.25em;
+    height: 81vh;
   }
 
   @include media-xl {
@@ -27,13 +30,13 @@
   }
 }
 
+.image-banner-2 {
+  background-position-x: 60%;
+}
+
 .image-banner.right {
   align-items: flex-end;
 }
-
-// .image-banner-content {
-//   padding: 0 70px;
-// }
 
 .slider-indicators {
   position: absolute;
@@ -43,14 +46,24 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding-bottom: 25px;
+  padding-bottom: 15px;
+
+  @include media-md {
+    padding-bottom: 25px;
+    padding-bottom: 25px;
+  }
 }
 
 .slider-indicator {
   position: relative;
   background: rgba(255, 255, 255, 0.4);
-  width: 25px;
-  height: 25px;
+  width: 15px;
+  height: 15px;
+
+  @include media-md {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .slider-indicator.active {
@@ -58,7 +71,13 @@
 }
 
 .slider-indicator:not(:first-child) {
-  margin-left: 20px;
+  margin-left: 15px;
+  margin-left: 15px;
+
+  @include media-md {
+    margin-left: 25px;
+    margin-left: 25px;
+  }
 }
 
 // .left-align-bg {

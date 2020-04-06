@@ -2,8 +2,13 @@
 
 .newsletter-cta-container {
   background-color: $green;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 10px;
+  padding-bottom: 25px;
+
+  @include media-md {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .icon {

@@ -6,6 +6,7 @@ import { PrimaryButton, SecondaryButton } from '../buttons'
 /**
  *
  * @param {boolean} altButton Change to secondary button style
+ * @param {string} classes Any additional classes for styling
  * @param {boolean} rightPlacement choose true to align text and button to the left
  * @param {boolean} backgroundLeft Choose wether to left align background
  * @param {string} buttonText Text of the banner button
@@ -13,15 +14,24 @@ import { PrimaryButton, SecondaryButton } from '../buttons'
  * @param {string} img url to image
  * @param {string} mobileImg url to mobile image
  */
-const ImageBanner = ({ altButton = false, rightPlacement = false, backgroundLeft, buttonText, slider, img }) => {
+const ImageBanner = ({
+  classes,
+  altButton = false,
+  rightPlacement = false,
+  backgroundLeft,
+  buttonText,
+  slider,
+  img,
+}) => {
   // returns custom classes with a space, so it could be added to ClassName property
   const getClassesFromProps = () => {
-    let classes = ''
+    let customClasses = ''
 
-    if (rightPlacement) classes += ' right'
-    if (backgroundLeft) classes += ' left-align-bg'
+    if (rightPlacement) customClasses += ' right'
+    if (classes) customClasses += ` ${classes}`
+    if (backgroundLeft) customClasses += ' left-align-bg'
 
-    return classes
+    return customClasses
   }
 
   return (
@@ -44,6 +54,7 @@ const ImageBanner = ({ altButton = false, rightPlacement = false, backgroundLeft
 }
 
 ImageBanner.propTypes = {
+  classes: PropTypes.string,
   altButton: PropTypes.bool,
   rightPlacement: PropTypes.bool,
   backgroundLeft: PropTypes.bool,

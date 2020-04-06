@@ -4,8 +4,18 @@
 
 .footer {
   background-color: black;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @include media-md {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  @include media-lg {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }
 
 .footer-inner {

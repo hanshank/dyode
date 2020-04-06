@@ -43,6 +43,7 @@ const IndexPage = () => {
       </section>
 
       <ImageBanner
+        classes="image-banner-2"
         buttonText="SHOP NOW"
         img={HeroTwoImg}
         mobileImg={HeroTwoMobileImg}

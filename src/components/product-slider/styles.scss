@@ -12,7 +12,12 @@
 
 .product-text {
   margin: 15px 0;
+  margin-bottom: 5px;
   text-align: center;
+
+  @include media-md {
+    margin-bottom: 15px;
+  }
 }
 
 .product-slider-title {

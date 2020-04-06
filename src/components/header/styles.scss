@@ -19,8 +19,13 @@
   background: $green;
   display: flex;
   justify-content: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+
+  @include media-md {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 
 .navbar {
@@ -57,7 +62,7 @@
     display: flex;
     align-items: center;
     transform: unset;
-    background-color: none;
+    background-color: unset;
   }
 }
 
@@ -73,7 +78,7 @@
 .navbar-close {
   color: white;
   font-family: $main-font;
-  height: 30px;
+  height: 20px;
   position: absolute;
   top: 15px;
   right: 15px;
@@ -87,8 +92,16 @@
   color: white;
   text-decoration: none;
   font-family: $cursive-font;
-  font-size: 45px;
-  line-height: 50%;
+  font-size: 2.5rem;
+  line-height: 100%;
+
+  @include media-md {
+    line-height: 65%;
+  }
+
+  @include media-lg {
+    line-height: 50%;
+  }
 }
 
 
@@ -96,7 +109,7 @@
   text-decoration: none;
   font-family: $main-font;
   font-weight: 200;
-  font-size: 30px;
+  font-size: 1.666rem;
   color: white;
 }
 
